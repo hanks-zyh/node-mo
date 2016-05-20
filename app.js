@@ -46,7 +46,7 @@ app.get('/movie/:id',function (req,res) {
         title: '详情页',
         movie:{
             title:'美国队长3：内战',
-            doctor: '安东尼·罗素 / 乔·罗素',
+            director: '安东尼·罗素 / 乔·罗素',
             editor : '克里斯托弗·马库斯 / 斯蒂芬·麦克菲利 / 杰克·科比 / 乔·西蒙',
             actor : '克里斯·埃文斯 / 小罗伯特·唐尼 / 斯嘉丽·约翰逊 / 塞巴斯蒂安·斯坦 / 安东尼·麦凯 / 更多...',
             type : '动作 / 科幻 / 冒险',
@@ -62,9 +62,19 @@ app.get('/movie/:id',function (req,res) {
     })
 })
 
-// admin
-app.get('/admin',function (req,res) {
-    res.render('index',{
-        title: '管理员'
+//admin page
+app.get('/admin/movie', function (req, res) {
+    res.render('admin', {
+        title: 'imooc 后台录入页',
+        movie: {
+            director: '',
+            country: '',
+            title: '',
+            year: '',
+            poster: '',
+            language: '',
+            flash: '',
+            summary: ''
+        }
     })
 })
