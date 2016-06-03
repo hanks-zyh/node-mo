@@ -1,2 +1,2 @@
 # node-mo
-mode-mo
+node-mo
